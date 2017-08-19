@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Expense manager</title>
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  </script>
+
+  </head>
+  <body>
+    <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo right">Logo</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="sass.html">Personal Expense Manager</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+          <div class="col s12 m6" id="">
+            <div class="card-panel teal">
+              <span class="white-text">
+                <h5><b>ADD Category</b></h5>
+                <a class="waves-effect waves-light btn" id="addCat" onclick="show()" >Click here</a>
+
+              </span>
+            </div>
+          </div>
+
+          <div class="col s12 m6" style="display: none" id="showCat">
+            <div class="card-panel teal">
+              <span class="white-text">
+              <h6>Enter category name: <input type="text" name="" value="" id="catName"></h6>
+              <h6>Enter expense limit: <input type="number" name="" value="" id="catLimit"></h6>
+              <a class="waves-effect waves-light btn" id="catAdded" onclick="addCategory()">DONE</a>
+
+              </span>
+            </div>
+          </div>
+    </div>
+    <script type="text/javascript">
+      function show()
+      {
+        console.log("Helo");
+        document.getElementById('showCat').style.display = 'block';
+
+      }
+      function addCategory()
+      {
+        console.log("added");
+        var name = document.getElementById('catName').value;
+        var limit =  document.getElementById('catLimit').value;
+        console.log(name);
+        $( "#abc" ).after(  '<div class="row"> <div class="col s12 m12"> <div class="card-panel teal"> <span class="white-text"> <h5><b>'   + name +  '</b><i> (Spending limit:' + limit + ' INR)</i></h5> <hr> </span> </div> </div> </div>'  );
+
+      }
+    </script>
+    <div class="row">
+          <div class="col s12 m12">
+            <div class="card-panel teal">
+              <span class="white-text">
+                <h5><b>FOOD</b><i> (Spending limit: 10000INR)</i></h5>
+                <hr>
+              </span>
+            </div>
+          </div>
+    </div>
+    <div class="row">
+          <div class="col s12 m12">
+            <div class="card-panel teal">
+              <span class="white-text">
+                <h5><b>TRAVEL</b><i> (Spending limit: 80000INR)</i></h5>
+                <hr>
+              </span>
+            </div>
+          </div>
+    </div>
+    <div class="row">
+          <div class="col s12 m12">
+            <div class="card-panel teal">
+              <span class="white-text">
+                <h5><b>CLOTHES</b><i> (Spending limit: 20000INR)</i></h5>
+                <hr>
+              </span>
+            </div>
+          </div>
+    </div>
+    <div class="row" id="abc">
+          <div class="col s12 m12">
+            <div class="card-panel teal">
+              <span class="white-text">
+                <h5><b>BILLS</b><i> (Spending limit: 40000INR)</i></h5>
+                <hr>
+              </span>
+            </div>
+          </div>
+    </div>
+
+
+  </div>
+
+  <script type="features.js"></script>
+
+  </body>
+</html>
