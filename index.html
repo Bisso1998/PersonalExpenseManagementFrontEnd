@@ -28,13 +28,57 @@
           <div class="col s12 m6" id="">
             <div class="card-panel teal">
               <span class="white-text">
-                <h5><b>ADD Category</b></h5>
-                <a class="waves-effect waves-light btn" id="addCat" onclick="show()" >Click here</a>
+                <h5><b>Expense Manager</b></h5>
+                <a class="waves-effect waves-light btn" id="addCat" onclick="show()" >Add category </a>
+
+
+              <a class="waves-effect waves-light btn" id="foodAdd" onclick="addExpense()" >Add expense</a>
+              <script type="text/javascript">
+                function addExpense()
+                {
+                  document.getElementById('addExpense').style.display = 'block';
+
+                }
+              </script>
+            </div>
+        <div class="row">
+          <div class="col s12 m6" style="display:none " id="showCat">
+            <div class="card-panel teal">
+              <span class="white-text">
+              <h6>Enter category name: <input type="text" name="" value="" id="catName"></h6>
+              <h6>Enter expense limit: <input type="number" name="" value="" id="catLimit"></h6>
+              <a class="waves-effect waves-light btn" id="catAdded" onclick="addCategory()">DONE</a>
 
               </span>
             </div>
           </div>
+          <div class="col s12 m6" style="display:none " id="addExpense">
+            <div class="card-panel teal">
+              <span class="white-text">
+              <h6>Enter amount: <input type="text" name="" value="" id="amount"></h6>
+              <h6>Enter expense category: <input type="text" name="" value="" id="expenseCategory"></h6>
+              <h6>Enter payment method: <input type="number" name="" value="" id="paymentMethod"></h6>
+              <h6>Expense name : <input type="number" name="" value="" id="expenseName"></h6>
 
+              <a class="waves-effect waves-light btn" id="catAdded" onclick="addData()">DONE</a>
+              <script type="text/javascript">
+
+
+                function addData() {
+                  console.log("add data entered");
+                  var amount = document.getElementById('amount').value;
+                  var expenseCategory = document.getElementById('expenseCategory').value;
+                  var paymentMethod = document.getElementById('paymentMethod').value;
+                  var expenseName = document.getElementById('expenseName').value;
+                  $( "#" + expenseCategory ).after(  '<tr> <td>'+amount+'</td><td>'+expenseCategory+'</td><td>'+paymentMethod+'</td> <td>'+expenseName+'</td> </tr>'  );
+
+                }
+              </script>
+              </span>
+            </div>
+          </div>
+        </div>
+          </div>
           <div class="col s12 m6" style="display: none" id="showCat">
             <div class="card-panel teal">
               <span class="white-text">
@@ -69,9 +113,49 @@
               <span class="white-text">
                 <h5><b>FOOD</b><i> (Spending limit: 10000INR)</i></h5>
                 <hr>
+                <table>
+       <thead>
+         <tr>
+             <th>Amount</th>
+             <th>Expense Category</th>
+             <th>Payment Method</th>
+             <th>Expense Name</th>
+
+         </tr>
+       </thead>
+
+       <tbody>
+         <tr>
+           <td>300</td>
+           <td>Food</td>
+           <td>Paytm</td>
+           <td>Rice</td>
+
+         </tr>
+         <tr>
+           <td>300</td>
+           <td>Food</td>
+           <td>Paytm</td>
+           <td>Rice</td>
+
+         </tr>
+         <tr id="food">
+           <td>300</td>
+           <td>Food</td>
+           <td>Paytm</td>
+           <td>Rice</td>
+
+         </tr>
+       </tbody>
+     </table>
               </span>
             </div>
+
           </div>
+
+          <script type="text/javascript">
+
+          </script>
     </div>
     <div class="row">
           <div class="col s12 m12">
@@ -79,6 +163,41 @@
               <span class="white-text">
                 <h5><b>TRAVEL</b><i> (Spending limit: 80000INR)</i></h5>
                 <hr>
+                <table>
+       <thead>
+         <tr>
+             <th>Amount</th>
+             <th>Expense Category</th>
+             <th>Payment Method</th>
+             <th>Expense Name</th>
+
+         </tr>
+       </thead>
+
+       <tbody>
+         <tr>
+           <td>300</td>
+           <td>Food</td>
+           <td>Paytm</td>
+           <td>Rice</td>
+
+         </tr>
+         <tr>
+           <td>300</td>
+           <td>Food</td>
+           <td>Paytm</td>
+           <td>Rice</td>
+
+         </tr>
+         <tr id="travel">
+           <td>300</td>
+           <td>Food</td>
+           <td>Paytm</td>
+           <td>Rice</td>
+
+         </tr>
+       </tbody>
+     </table>
               </span>
             </div>
           </div>
@@ -89,6 +208,41 @@
               <span class="white-text">
                 <h5><b>CLOTHES</b><i> (Spending limit: 20000INR)</i></h5>
                 <hr>
+                <table>
+       <thead>
+         <tr>
+             <th>Amount</th>
+             <th>Expense Category</th>
+             <th>Payment Method</th>
+             <th>Expense Name</th>
+
+         </tr>
+       </thead>
+
+       <tbody>
+         <tr>
+           <td>300</td>
+           <td>Food</td>
+           <td>Paytm</td>
+           <td>Rice</td>
+
+         </tr>
+         <tr>
+           <td>300</td>
+           <td>Food</td>
+           <td>Paytm</td>
+           <td>Rice</td>
+
+         </tr>
+         <tr id="clothes">
+           <td>300</td>
+           <td>Food</td>
+           <td>Paytm</td>
+           <td>Rice</td>
+
+         </tr>
+       </tbody>
+     </table>
               </span>
             </div>
           </div>
@@ -99,6 +253,41 @@
               <span class="white-text">
                 <h5><b>BILLS</b><i> (Spending limit: 40000INR)</i></h5>
                 <hr>
+                <table>
+       <thead>
+         <tr>
+             <th>Amount</th>
+             <th>Expense Category</th>
+             <th>Payment Method</th>
+             <th>Expense Name</th>
+
+         </tr>
+       </thead>
+
+       <tbody>
+         <tr>
+           <td>300</td>
+           <td>Food</td>
+           <td>Paytm</td>
+           <td>Rice</td>
+
+         </tr>
+         <tr>
+           <td>300</td>
+           <td>Food</td>
+           <td>Paytm</td>
+           <td>Rice</td>
+
+         </tr>
+         <tr id="bills">
+           <td>300</td>
+           <td>Food</td>
+           <td>Paytm</td>
+           <td>Rice</td>
+
+         </tr>
+       </tbody>
+     </table>
               </span>
             </div>
           </div>
