@@ -16,7 +16,6 @@
   <body>
     <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo right">Logo</a>
       <ul id="nav-mobile" class="left hide-on-med-and-down">
         <li><a href="sass.html">Personal Expense Manager</a></li>
       </ul>
@@ -55,10 +54,10 @@
           <div class="col s12 m6" style="display:none " id="addExpense">
             <div class="card-panel teal">
               <span class="white-text">
-              <h6>Enter amount: <input type="text" name="" value="" id="amount"></h6>
+              <h6>Enter amount: <input type="number" name="" value="" id="amount"></h6>
               <h6>Enter expense category: <input type="text" name="" value="" id="expenseCategory"></h6>
-              <h6>Enter payment method: <input type="number" name="" value="" id="paymentMethod"></h6>
-              <h6>Expense name : <input type="number" name="" value="" id="expenseName"></h6>
+              <h6>Enter payment method: <input type="text" name="" value="" id="paymentMethod"></h6>
+              <h6>Expense name : <input type="text" name="" value="" id="expenseName"></h6>
 
               <a class="waves-effect waves-light btn" id="catAdded" onclick="addData()">DONE</a>
               <script type="text/javascript">
@@ -71,7 +70,7 @@
                   var paymentMethod = document.getElementById('paymentMethod').value;
                   var expenseName = document.getElementById('expenseName').value;
                   $( "#" + expenseCategory ).after(  '<tr> <td>'+amount+'</td><td>'+expenseCategory+'</td><td>'+paymentMethod+'</td> <td>'+expenseName+'</td> </tr>'  );
-
+                  alert ("Added " + amount +"INR" + " to " + expenseCategory);
                 }
               </script>
               </span>
@@ -103,8 +102,8 @@
         var name = document.getElementById('catName').value;
         var limit =  document.getElementById('catLimit').value;
         console.log(name);
-        $( "#abc" ).after(  '<div class="row"> <div class="col s12 m12"> <div class="card-panel teal"> <span class="white-text"> <h5><b>'   + name +  '</b><i> (Spending limit:' + limit + ' INR)</i></h5> <hr><table> <thead> <tr> <th>Amount</th> <th>Expense Category</th> <th>Payment Method</th> <th>Expense Name</th> </tr> </thead> <tbody> <tr id="'    + name +  '"> <td>300</td> <td>Food</td> <td>Paytm</td> <td>Rice</td> </tr> </tbody> </table> </span> </div> </div> </div>'  );
-
+        $( "#abc" ).after(  '<div class="row"> <div class="col s12 m12"> <div class="card-panel teal"> <span class="white-text"> <h5><b>'   + name +  '</b><i> (Spending limit:' + limit + ' INR)</i></h5> <hr><table> <thead> <tr> <th>Amount</th> <th>Expense Category</th> <th>Payment Method</th> <th>Expense Name</th> </tr> </thead> <tbody> <tr id='  +name+    '> <td></td> <td></td> <td></td> <td></td> </tr> </tbody> </table> </span> </div> </div> </div>'  );
+        alert(name + " added as a category with an expense limit of: " + limit + "INR");
       }
     </script>
     <div class="row">
@@ -125,25 +124,12 @@
        </thead>
 
        <tbody>
-         <tr>
-           <td>300</td>
-           <td>Food</td>
-           <td>Paytm</td>
-           <td>Rice</td>
 
-         </tr>
-         <tr>
-           <td>300</td>
-           <td>Food</td>
-           <td>Paytm</td>
-           <td>Rice</td>
-
-         </tr>
          <tr id="food">
-           <td>300</td>
-           <td>Food</td>
-           <td>Paytm</td>
-           <td>Rice</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
 
          </tr>
        </tbody>
@@ -175,25 +161,12 @@
        </thead>
 
        <tbody>
-         <tr>
-           <td>300</td>
-           <td>Food</td>
-           <td>Paytm</td>
-           <td>Rice</td>
 
-         </tr>
-         <tr>
-           <td>300</td>
-           <td>Food</td>
-           <td>Paytm</td>
-           <td>Rice</td>
-
-         </tr>
          <tr id="travel">
-           <td>300</td>
-           <td>Food</td>
-           <td>Paytm</td>
-           <td>Rice</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
 
          </tr>
        </tbody>
@@ -220,25 +193,11 @@
        </thead>
 
        <tbody>
-         <tr>
-           <td>300</td>
-           <td>Food</td>
-           <td>Paytm</td>
-           <td>Rice</td>
-
-         </tr>
-         <tr>
-           <td>300</td>
-           <td>Food</td>
-           <td>Paytm</td>
-           <td>Rice</td>
-
-         </tr>
          <tr id="clothes">
-           <td>300</td>
-           <td>Food</td>
-           <td>Paytm</td>
-           <td>Rice</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
 
          </tr>
        </tbody>
@@ -265,25 +224,12 @@
        </thead>
 
        <tbody>
-         <tr>
-           <td>300</td>
-           <td>Food</td>
-           <td>Paytm</td>
-           <td>Rice</td>
 
-         </tr>
-         <tr>
-           <td>300</td>
-           <td>Food</td>
-           <td>Paytm</td>
-           <td>Rice</td>
-
-         </tr>
          <tr id="bills">
-           <td>300</td>
-           <td>Food</td>
-           <td>Paytm</td>
-           <td>Rice</td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
 
          </tr>
        </tbody>
